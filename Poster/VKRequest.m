@@ -21,7 +21,12 @@
     request.method = [[NSUserDefaults standardUserDefaults] objectForKey:@"method"];
     request.URL = [NSURL URLWithString:[[NSUserDefaults standardUserDefaults] stringForKey:@"URL"]];
     request.parameters = [[NSUserDefaults standardUserDefaults] dictionaryForKey:@"parameters"];
-    return request;
+
+    if (request.method && request.URL) {
+        return request;
+    }
+
+    return nil;
 }
 
 - (instancetype)initWithMethod:(NSString *)method URL:(NSURL *)URL parameters:(NSDictionary *)parameters;

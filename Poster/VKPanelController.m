@@ -37,6 +37,8 @@
     [super awakeFromNib];
 
     VKRequest *lastRequest = [VKRequest lastRequest];
+    if (!lastRequest) return;
+
     [self.methodPopUp selectItemWithTitle:lastRequest.method];
     self.URLField.stringValue = [lastRequest.URL absoluteString];
     self.parameters = lastRequest.parameters;
