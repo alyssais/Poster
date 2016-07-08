@@ -1,11 +1,7 @@
 Poster
 ======
 
-## Warning: Some of this code is shit.
-
-However, the app does mostly work.
-
-I'll fix it and add docs tomorrow when I'm less tired.
+[![No Maintenance Intended](http://unmaintained.tech/badge.svg)](http://unmaintained.tech/)
 
 Click icon in menu bar to resubmit last request.
 
